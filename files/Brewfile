@@ -28,97 +28,54 @@ is_arm = Hardware::CPU.arm?
 
 # tap 'buo/cask-upgrade'
 tap 'romkatv/powerlevel10k'
-# tap 'trailofbits/homebrew-brew-verify'
+tap 'snyk/tap'
 
 brew 'bash'
 brew 'bat'
 brew 'btop'
+brew 'cocoapods'
 brew 'curl'
 brew 'diff-so-fancy'
 brew 'direnv'   # Note: If you get an error (for eg after upgrading direnv or if moving to a different ARM machine), you will need to delete '${HOME}/.zsh-evalcache' folder
-# brew 'dive'   # docker layers inspection on steroids
-# brew 'docker-diff'
-# brew 'docker-slim'  # TODO: investigate if the http-probe is a deal-breaker
-# brew 'fzy'
-# brew 'git-crypt'
+brew 'docker'
+brew 'fzy'
 brew 'git-extras'
 brew 'git-gui'
 brew 'git-tools'
 brew 'git'
-# brew 'gradle'
-# brew 'gradle-completion'
-# brew 'hadolint'     # lint Dockerfiles (similar to shellcheck for shell scripts)
-brew 'jq'
-# brew 'kubernetes-cli', link: true   # Note: Had to do this: rm /usr/local/bin/kubectl && brew link --overwrite kubernetes-cli
-# brew 'kubernetes-helm'
-brew 'less'
-# brew 'libressl', link: true
-# brew 'localstack'
-# brew 'make'
+brew 'jhipster'
 brew 'mise'
-brew 'moreutils'
 brew 'ncdu'
-# brew 'pkgdiff'
 brew 'powerlevel10k'
 brew 'prettyping'
-# brew 'reattach-to-user-namespace' # Needed if using tmux (to be able to access the macos clipboard from within tmux)
-brew 'ripgrep'
-brew 'shellcheck'
-# brew 'speedtest-cli'
-brew 'syncthing'
-brew 'tldr'
-# brew 'tmux'
+brew 'sonar-scanner'
 brew 'vim'
-brew 'watch'
+brew 'watchman'
 brew 'wget'
-brew 'wifi-password'
 brew 'zsh'
 
 # ----------------------------------------------------------------------------------------------------------
 brew 'mas'
 mas 'iBar-Menubar icon control tool', id: 6443843900
-mas 'Velja', id: 1607635845
-
 # ----------------------------------------------------------------------------------------------------------
+
 cask 'aldente'
-# cask 'alfred'
-cask 'appcleaner'
+cask 'android-studio'
 cask 'arc'
-cask 'brave-browser@nightly'
 cask 'clocker'
-cask 'cloudflare-warp'
-cask 'command-x'
-# cask 'dbeaver-community'
-# cask 'dupeguru'
-cask 'firefox@nightly' #, greedy: true
+cask 'dbeaver-community'
 cask 'flycut'
 cask 'font-meslo-lg-nerd-font'
-# cask 'git-credential-manager'  # https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git
-# cask 'intellij-idea-ce'
-cask 'iterm2@nightly'
+cask 'google-chrome'
+cask 'intellij-idea'
+cask 'iterm2'
 cask 'itsycal'
-# cask 'kdiff3'
-cask 'keepassxc@beta'
 cask 'keepingyouawake'
 cask 'keybase'
-# cask 'keycastr'
-cask 'libreoffice'
-# cask 'licecap'
-# cask 'lulu'
-cask 'monolingual'
-# cask 'netspot'
-# cask 'ngrok'
-cask 'notunes'
-# cask 'onyx'  # Commented out since I'm on the beta version of macos
-cask 'protonvpn'
 cask 'rancher'
 cask 'rectangle'
-cask 'silicon' if is_arm
 cask 'stats'
-# cask 'tempbox'
-cask 'the-unarchiver'
-cask 'thunderbird@daily'  # TODO: Commented out since I haven't opened TBird for the past 6 months - maybe its time to let go
-cask 'vscodium@insiders'   # TODO: Doesn't handle 'Remote Containers' and GH-based auto-syncing when comparing to VSCode
+cask 'vscodium'
 cask 'zoom'
 
 # VSCode extensions
@@ -129,14 +86,11 @@ if is_vscode_installed
   vscode 'britesnow.vscode-toggle-quotes'
   vscode 'codezombiech.gitignore'
   vscode 'davidanson.vscode-markdownlint'
-  vscode 'dbaeumer.vscode-eslint'
-  vscode 'digitalbrainstem.javascript-ejs-support'
-  vscode 'drcika.apc-extension'
   vscode 'eamodio.gitlens'
   vscode 'editorconfig.editorconfig'
   vscode 'esbenp.prettier-vscode'
-  vscode 'formulahendry.code-runner'
-  vscode 'genuitecllc.codetogether'
+  # vscode 'formulahendry.code-runner'
+  # vscode 'genuitecllc.codetogether'
   vscode 'ibm.output-colorizer'
   vscode 'mechatroner.rainbow-csv'
   vscode 'mikestead.dotenv'

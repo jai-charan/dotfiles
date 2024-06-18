@@ -8,8 +8,6 @@
 # Note: Even though this will show up twice in `git config -l` - it will still be overridden based on the order of the includeIf lines below
 [includeIf "gitdir/i:~/"]             # Personal
   path = ~/.gitconfig-oss.inc         # Personal
-[includeIf "gitdir/i:~/dev/jd/"]      # Personal
-  path = ~/.gitconfig-jd.inc          # Personal
 [includeIf "gitdir/i:~/dev/tw/"]      # Personal
   path = ~/.gitconfig-tw.inc          # Personal
 [alias]
@@ -39,7 +37,6 @@
         git ci \"$0\"; \
       fi \
     fi'"
-
   what = show -s --pretty='tformat:%h (%s, %ad)' --date=short
 
   # show commit info summary (count and name)
@@ -138,7 +135,6 @@
   g = grep --break --heading --line-number
 
   rfc = "reflog expire --expire=now"
-
   # compress disk-space-usage by deleting dangling commits
   # Note: Do not use '--all' switch for reflog expire - since that also destroys stashes
   cc = "!echo \"==> Size of repository at $(pwd) before: $(du -sh .git | cut -f1)\"; git remote prune origin; git repack; git prune-packed; git reflog expire --all --expire=1.week.ago; git maintenance run --task=gc; echo \"==> Size of repository at $(pwd) after: $(du -sh .git | cut -f1)\";"

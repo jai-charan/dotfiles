@@ -161,6 +161,7 @@ __pycache__
 /.rvm/
 /.sbt/
 /.scalarDiagnostics/
+/.sdkman/
 /.Skype
 /.sonarlint/
 /.ssh/known_hosts
@@ -177,6 +178,7 @@ __pycache__
 /.tldrc/
 /.tmux
 /.tooling/gradle/checksums/
+/.tooling/gradle/checksums/
 /.tooling/gradle/versions.json
 /.Trash
 /.TrueCrypt*
@@ -185,6 +187,9 @@ __pycache__
 /.viminfo
 /.vpython*
 /.vscod*
+/.vscode-oss/
+/.vscode/
+/.vscodium-insiders
 /.wget-hsts
 /.xsession-errors*
 /.yahoorc
@@ -240,7 +245,7 @@ temp/
 Thumbs.db
 tmp/
 
-# files that are symlinked from the oss repo
+# Files from dotfiles repo
 /.aliases
 /.aliases.custom
 /.angular-config.json
