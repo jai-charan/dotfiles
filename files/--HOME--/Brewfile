@@ -21,10 +21,16 @@ is_arm = Hardware::CPU.arm?
 
 tap 'homebrew/services'
 tap 'romkatv/powerlevel10k'
+tap 'snyk/tap'
 
+# brew 'jq'
+# brew 'ripgrep'
+# brew 'syncthing'
+# brew 'tldr'
 brew 'bash'
 brew 'bat'
 brew 'btop'
+brew 'cocoapods'
 brew 'curl'
 brew 'diff-so-fancy'
 brew 'direnv'
@@ -33,56 +39,42 @@ brew 'git-extras'
 brew 'git-gui'
 brew 'git-tools'
 brew 'git'
-# brew 'gnu-tar'  # used for zen-browser development
-brew 'gs'   # used for compressing PDFs
-brew 'jq'
+brew 'jhipster'
 brew 'less'
 brew 'mise'
-brew 'moreutils'
 brew 'ncdu'
 brew 'powerlevel10k'
 brew 'prettyping'
-brew 'ripgrep'
-brew 'syncthing'
-brew 'tldr'
+brew 'sonar-scanner'
 brew 'vim'
-brew 'watch'
+brew 'watchman'
 brew 'wget'
-brew 'wifi-password'
 brew 'zsh'
 
 # ----------------------------------------------------------------------------------------------------------
-brew 'mas'
-mas 'iBar-Menubar icon control tool', id: 6443843900
-# mas 'Command X', id: 6448461551
-
+# brew 'mas'
+# mas 'iBar-Menubar icon control tool', id: 6443843900
 # ----------------------------------------------------------------------------------------------------------
+
 cask 'aldente'
-cask 'appcleaner'
-cask 'arc'
-cask 'brave-browser'
+cask 'android-studio'
+cask 'bitwarden'
 cask 'clocker'
+cask 'dbeaver-community'
 cask 'firefox@nightly' #, greedy: true
 cask 'font-meslo-lg-nerd-font'
+cask 'google-chrome'
+cask 'intellij-idea'
 cask 'iterm2'
 cask 'itsycal'
-cask 'keepassxc@beta'
 cask 'keepingyouawake'
 cask 'keybase'
-cask 'libreoffice'
-cask 'monolingual'
-cask 'notunes'
-cask 'ollama', restart_service: :changed
-cask 'onyx'
 cask 'protonvpn'
 cask 'rancher'
 cask 'raycast'
-cask 'silicon' if is_arm
 cask 'stats'
 cask 'the-unarchiver'
-cask 'virtualbox'
-cask 'vscodium@insiders'   # TODO: Doesn't handle 'Remote Containers' and GH-based auto-syncing when comparing to VSCode
-cask 'zen-browser@twilight'
+cask 'vscodium'
 cask 'zoom'
 
 # VSCode extensions
@@ -93,14 +85,11 @@ if is_vscode_installed
   vscode 'britesnow.vscode-toggle-quotes'
   vscode 'codezombiech.gitignore'
   vscode 'davidanson.vscode-markdownlint'
-  vscode 'dbaeumer.vscode-eslint'
-  vscode 'digitalbrainstem.javascript-ejs-support'
-  vscode 'drcika.apc-extension'
   vscode 'eamodio.gitlens'
   vscode 'editorconfig.editorconfig'
   vscode 'esbenp.prettier-vscode'
   # vscode 'formulahendry.code-runner'
-  vscode 'genuitecllc.codetogether'
+  # vscode 'genuitecllc.codetogether'
   vscode 'ibm.output-colorizer'
   vscode 'mechatroner.rainbow-csv'
   vscode 'mikestead.dotenv'

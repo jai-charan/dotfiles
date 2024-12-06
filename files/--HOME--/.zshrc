@@ -152,6 +152,13 @@ export ARCHFLAGS="-arch $(uname -m)"
 
 load_file_if_exists "${HOME}/.zshrc.custom"
 
+# Load Angular CLI autocompletion.
+# source <(ng completion script)
+
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 # remove duplicates from some env vars
 typeset -gU cdpath CPPFLAGS cppflags FPATH fpath infopath LDFLAGS ldflags MANPATH manpath PATH path PKG_CONFIG_PATH
 

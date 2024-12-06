@@ -37,7 +37,7 @@ export XDG_STATE_HOME="$HOME/.local/state"
 
 # ------------ Env vars for basic/common setup ------------
 # The github username where the setup scripts are downloaded from
-export GH_USERNAME="vraravam"
+export GH_USERNAME="jai-charan"
 
 # Vijay's github username for setting upstream remote
 export UPSTREAM_GH_USERNAME="vraravam" # Note: Do NOT change this
@@ -59,10 +59,10 @@ export PERSONAL_CONFIGS_DIR="${HOME}/personal/dev/configs"
 export PERSONAL_PROFILES_DIR="${HOME}/personal/$(whoami)/profiles"
 
 # Keybase username
-export KEYBASE_USERNAME="avijayr"
+export KEYBASE_USERNAME="jaicharan"
 
 # Keybase home repo name
 export KEYBASE_HOME_REPO_NAME="home"
 
 # Keybase profiles repo name
-export KEYBASE_PROFILES_REPO_NAME="profiles"
+# export KEYBASE_PROFILES_REPO_NAME="profiles"
